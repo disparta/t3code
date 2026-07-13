@@ -26,8 +26,8 @@ const VARIANT_CONFIG: Record<
     scheme: "t3code-dev",
     iosIcon: "./assets/icon-composer-dev.icon",
     splashIcon: "./assets/splash-icon-dev.png",
-    iosBundleIdentifier: "com.t3tools.t3code.dev",
-    androidPackage: "com.t3tools.t3code.dev",
+    iosBundleIdentifier: "com.klooless.t3code.dev",
+    androidPackage: "com.klooless.t3code.dev",
     relyingParty: "clerk.t3.codes",
   },
   preview: {
@@ -35,8 +35,8 @@ const VARIANT_CONFIG: Record<
     scheme: "t3code-preview",
     iosIcon: "./assets/icon-composer-prod.icon",
     splashIcon: "./assets/splash-icon-prod.png",
-    iosBundleIdentifier: "com.t3tools.t3code.preview",
-    androidPackage: "com.t3tools.t3code.preview",
+    iosBundleIdentifier: "com.klooless.t3code.preview",
+    androidPackage: "com.klooless.t3code.preview",
     relyingParty: "clerk.t3.codes",
   },
   production: {
@@ -44,8 +44,8 @@ const VARIANT_CONFIG: Record<
     scheme: "t3code",
     iosIcon: "./assets/icon-composer-prod.icon",
     splashIcon: "./assets/splash-icon-prod.png",
-    iosBundleIdentifier: "com.t3tools.t3code",
-    androidPackage: "com.t3tools.t3code",
+    iosBundleIdentifier: "com.klooless.t3code",
+    androidPackage: "com.klooless.t3code",
     relyingParty: "clerk.t3.codes",
   },
 };
@@ -102,7 +102,7 @@ const config: ExpoConfig = {
     // Pin code signing to the T3 Tools team so non-interactive `expo run:ios`
     // does not fall back to a personal team (which cannot sign app groups,
     // Sign in with Apple, or push notification entitlements).
-    appleTeamId: "ARK85ZXQ4Z",
+    appleTeamId: "3RC67D2VWB",
     associatedDomains: [
       `applinks:${variant.relyingParty}`,
       `webcredentials:${variant.relyingParty}`,
