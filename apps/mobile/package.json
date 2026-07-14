@@ -16,9 +16,9 @@
     "android:preview": "APP_VARIANT=preview EXPO_NO_GIT_STATUS=1 expo prebuild --clean --platform android && expo run:android",
     "android:prod": "APP_VARIANT=production EXPO_NO_GIT_STATUS=1 expo prebuild --clean --platform android && expo run:android",
     "eas:android:dev": "eas build --profile development -p android",
-    "eas:android:preview": "eas build --profile preview -p android",
+    "eas:android:preview": "eas build --profile preview -p android --local",
     "eas:android:preview:dev": "eas build --profile preview:dev -p android",
-    "eas:android:prod": "eas build --profile production -p android",
+    "eas:android:prod": "eas build --profile production -p android --local",
     "ios": "EXPO_NO_GIT_STATUS=1 expo prebuild --clean --platform ios && expo run:ios",
     "ios:dev": "APP_VARIANT=development EXPO_NO_GIT_STATUS=1 expo prebuild --clean --platform ios && expo run:ios",
     "ios:preview": "APP_VARIANT=preview EXPO_NO_GIT_STATUS=1 expo prebuild --clean --platform ios && expo run:ios",
@@ -120,9 +120,6 @@
     "babel-preset-expo": "~56.0.0",
     "tailwindcss": "^4.0.0",
     "typescript": "catalog:"
-  },
-  "overrides": {
-    "react-native-nitro-markdown": "file:deps/react-native-nitro-markdown-0.5.0.tgz"
   },
   "expo": {
     "autolinking": {

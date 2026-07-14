@@ -22,7 +22,7 @@ const VARIANT_CONFIG: Record<
   }
 > = {
   development: {
-    appName: "T3 Code Dev",
+    appName: "T3 Code Dev - Klooless",
     scheme: "t3code-dev",
     iosIcon: "./assets/icon-composer-dev.icon",
     splashIcon: "./assets/splash-icon-dev.png",
@@ -31,7 +31,7 @@ const VARIANT_CONFIG: Record<
     relyingParty: "clerk.t3.codes",
   },
   preview: {
-    appName: "T3 Code Preview",
+    appName: "T3 Code Preview - Klooless",
     scheme: "t3code-preview",
     iosIcon: "./assets/icon-composer-prod.icon",
     splashIcon: "./assets/splash-icon-prod.png",
@@ -40,7 +40,7 @@ const VARIANT_CONFIG: Record<
     relyingParty: "clerk.t3.codes",
   },
   production: {
-    appName: "T3 Code",
+    appName: "T3 Code - Klooless",
     scheme: "t3code",
     iosIcon: "./assets/icon-composer-prod.icon",
     splashIcon: "./assets/splash-icon-prod.png",
@@ -98,6 +98,7 @@ const config: ExpoConfig = {
   ios: {
     icon: variant.iosIcon,
     supportsTablet: true,
+    buildNumber: "2",
     bundleIdentifier: variant.iosBundleIdentifier,
     // Pin code signing to the T3 Tools team so non-interactive `expo run:ios`
     // does not fall back to a personal team (which cannot sign app groups,
@@ -245,10 +246,10 @@ const config: ExpoConfig = {
       tracesToken: repoEnv.EXPO_PUBLIC_OTLP_TRACES_TOKEN ?? null,
     },
     eas: {
-      projectId: "d763fcb8-d37c-41ea-a773-b54a0ab4a454",
+      projectId: "b91bd454-8792-49f8-81b1-7d9777676c7e",
     },
   },
-  owner: "pingdotgg",
+  owner: "disparta",
 };
 
 export default config;
