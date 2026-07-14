@@ -132,7 +132,7 @@ const config: ExpoConfig = {
   ios: {
     icon: variant.iosIcon,
     supportsTablet: true,
-    buildNumber: "2",
+    buildNumber: "4",
     bundleIdentifier: variant.iosBundleIdentifier,
     // Pin code signing to the T3 Tools team so non-interactive `expo run:ios`
     // does not fall back to a personal team (which cannot sign app groups,
