@@ -163,6 +163,33 @@ describe("effectiveSettled", () => {
     ).toBe(true);
   });
 
+  it("settles immediately when a change request merges or closes", () => {
+    const recentlyActive = makeShell({ activityAt: "2026-04-09T23:59:59.999Z" });
+    for (const changeRequestState of ["merged", "closed"] as const) {
+      expect(
+        effectiveSettled(recentlyActive, {
+          now: NOW,
+          autoSettleAfterDays: null,
+          changeRequestState,
+        }),
+      ).toBe(true);
+    }
+  });
+
+  it("keeps an explicitly un-settled merged-PR thread active", () => {
+    const shell = makeShell({
+      settledOverride: "active",
+      activityAt: "2026-04-09T23:59:59.999Z",
+    });
+    expect(
+      effectiveSettled(shell, {
+        now: NOW,
+        autoSettleAfterDays: null,
+        changeRequestState: "merged",
+      }),
+    ).toBe(false);
+  });
+
   it("never settles a starting session, even with a settled override", () => {
     const shell = makeShell({
       settledOverride: "settled",
